@@ -4,14 +4,14 @@
   `x` as the variable inside the function, however.
 */
 
-x = 5;
+var x = 5;
 
-function double(num) {
+/*function double(num) {
   x = num * 2;
   return x;
 }
 
-double(6);
+/*double(6);
 console.log('The value of x is', x, '-- it should be 5.');
 
 /*
@@ -24,9 +24,28 @@ console.log('The value of x is', x, '-- it should be 5.');
   can accurately test your work.
 */
 
+/* var x = 5;
+var double  = function(num){
+  var x = num * 2;
+  return x;
+}
+double(6);
+console.log('The value of x is', x, '-- it should be 5.');
 
 /*
   Step 3. Rewrite your corrected `double()` function from Step 2.
   so that non-number values passed into the function are handled
   in some reasonable way.
 */
+
+var x = 5;
+var double = function(num){
+  if (typeof num == 'number'){
+    let x = num * 2;
+    return x;
+  }
+  else {
+    let x = number(num) * 2;
+    return x;
+  }
+}
